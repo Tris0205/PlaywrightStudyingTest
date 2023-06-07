@@ -45,6 +45,8 @@ jobs:
         node-version: '16.x'
     - name: Install dependencies
       run: npm ci
+    - name: Install thing
+      run: npm install
     - name: Install Playwright
       run: npx playwright install --with-deps
     - name: Run Playwright serial
