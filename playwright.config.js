@@ -38,7 +38,7 @@ module.exports = defineConfig({
       {
         channels: ["pw-tests", "ci"], // provide one or more Slack channels
         sendResults: "always", // "always" , "on-failure", "off"
-        layout: generateCustomLayout,
+        layout: generateCustomLayoutSimpleExample,
         slackOAuthToken: TOKEN,
         slackLogLevel: LogLevel.DEBUG,
         disableUnfurl: true,
