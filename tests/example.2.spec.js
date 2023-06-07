@@ -9,5 +9,6 @@ test("test env", async ({ page }) => {
   await page.goto(ENV.BASE_URL);
   console.log(page.url());
   console.log(ENV.TEXT);
+  console.log("alibaba");
 });
  
