@@ -55,6 +55,7 @@ jobs:
     - name: Generate Allure Report
       run: |
           npx allure generate --clean
+          rm -rf allure-report
           mkdir allure-report
           cp -r allure-report/* allure-results
           cp -r allure-results allure-report
