@@ -55,10 +55,9 @@ jobs:
     - name: Generate Allure Report
       run: |
           npx allure generate --clean
-          if [ -d "allure-results" ]; then
-            mkdir allure-report
-            cp -r allure-results/* allure-report
-          fi
+          rm -rf allure-report
+          mkdir allure-report
+          cp -r allure-results/* allure-report
 
     - name: Store Allure Report
       uses: actions/upload-artifact@v2
