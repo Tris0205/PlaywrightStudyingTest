@@ -5,7 +5,7 @@ import { slackReporter, getReportUrl } from 'playwright-slack-report';
 export default function generateCustomLayoutSimpleExample(
   summaryResults: SummaryResults,
 ): Array<Block | KnownBlock> {
-  const slackOAuthToken = 'xoxb-5245659500131-5258569071793-SIOBLWsAXOA62zamKqKHqZNR';
+  const slackOAuthToken = '';
   const reporter = slackReporter({ token: slackOAuthToken });
   const reportUrl = getReportUrl(reporter);
 
