@@ -52,8 +52,3 @@ jobs:
         run: npx playwright test --workers=1
       - name: Run Playwright parallel
         run: npx playwright test --workers=2
-      - name: Store Allure Report
-        uses: actions/upload-artifact@v3
-        with:
-          name: allure-report
-          path: allure-report
