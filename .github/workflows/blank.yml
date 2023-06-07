@@ -51,3 +51,16 @@ jobs:
       run: npx playwright test --workers=1
     - name: Run Playwright parallel
       run: npx playwright test --workers=2
+      
+    - name: Generate Allure Report
+      run: |
+          npx allure generate --clean
+          mkdir allure-report
+          cp -r allure-report/* allure-results
+          cp -r allure-results allure-report
+
+    - name: Store Allure Report
+      uses: actions/upload-artifact@v2
+      with:
+          name: allure-report
+          path: allure-report
