@@ -44,11 +44,13 @@ jobs:
       with:
         node-version: '16.x'
     - name: Install dependencies
-      run: npm ci --legacy-peer-deps --cache $CI_PROJECT_DIR/npm_cache --prefer-offline
+      run: npm ci
     - name: Install thing
       run: npm install
     - name: Install Playwright
       run: npx playwright install --with-deps
+    - name: Install Slack Playwright
+      run: npm install playwright-slack-report -D
     - name: Run Playwright serial
       run: npx playwright test --workers=1
     - name: Run Playwright parallel
