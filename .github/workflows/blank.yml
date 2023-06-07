@@ -44,7 +44,7 @@ jobs:
       with:
         node-version: '16.x'
     - name: Install dependencies
-      run: npm ci
+      run: npm ci --legacy-peer-deps --cache $CI_PROJECT_DIR/npm_cache --prefer-offline
     - name: Install thing
       run: npm install
     - name: Install Playwright
