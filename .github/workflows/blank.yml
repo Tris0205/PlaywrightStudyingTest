@@ -58,12 +58,8 @@ jobs:
         run: |
           mkdir allure-report
           cp -r allure-results allure-report
-        # You can also use the 'actions/upload-artifact' action if desired:
-        # - name: Store Allure Report
-        #   uses: actions/upload-artifact@v2
-        #   with:
-        #     name: allure-report
-        #     path: allure-report
+      - name: Store Allure Report
+        uses: actions/upload-artifact@v2
 
       - name: Output Allure Report URL
         id: artifact
